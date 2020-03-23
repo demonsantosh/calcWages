@@ -1,0 +1,2 @@
+rootProject.name='Wages Calculator'
+include ':app'

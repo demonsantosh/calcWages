@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/commonPadding">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llBottom"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txvWorkingHours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/workingDaysInMonth" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinnerWorkingDays"
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/months" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txvInpWorkHours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/workingHours">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inpEdtWorkHours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="12"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txvInpWorkMinutes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/workingMinutes">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inpEdtWorkMinutes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txvInpSalaryPerMonth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/salaryPerDay">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inpEdtSalaryPerMonth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txvAddHnM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/enterPerDayWork"
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="true"
+            android:descendantFocusability="beforeDescendants"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        >
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/totalTimeWorked"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/totalEarning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</RelativeLayout>
